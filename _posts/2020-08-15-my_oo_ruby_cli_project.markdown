@@ -50,10 +50,10 @@ Passing in the information as key value pairs.
 This allowed me to easily list them using terminal table iterating through each object and calling upon those keys to return their values.
 
 A problem I quickly ran into was when loading an accounts match history if I specified to load more than 10 games.
-The progam only taking advantage of one thread at a time would hang and a user could easily think it has crashed or stop functioning. 
+The progam, only taking advantage of one thread at a time would hang and a user could easily think it has crashed or stopped functioning. 
 I used the gem tty-progressbar to show a visual representation of what the program was currently doing and so the user could see it was just loading a large amount of data and was in fact still running.
 
-All of these gems I knew absolutely nothing about when I first began this project but after googling and looking through the docs endlessly I can say I'd be comfortable using them again if needed.
-This project humbled me in many ways and pushed me to learn more to make the gem as good as I could. I'm excited to see what's in store for future projects and looking forward to being pushed out of my comfort zone to learn more!
+All of these gems I knew absolutely nothing about when I first began this project, but after googling and looking through the docs endlessly I can say I'd be comfortable using them again if needed.
+This project humbled me in many ways and pushed me to learn more to make the gem as well as I could. I'm excited to see what's in store for future projects and looking forward to being pushed out of my comfort zone to learn more!
 
 
