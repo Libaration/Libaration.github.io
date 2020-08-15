@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My OO Ruby CLI Project"
-date:       2020-08-15 06:25:57 +0000
+date:       2020-08-15 02:25:57 -0400
 permalink:  my_oo_ruby_cli_project
 ---
 
@@ -14,8 +14,7 @@ My CLI project is a gem that scrapes data from a few sources.
 ## The program allows users to pick through the current list of champions to find out more about an individual champion.
 ![](https://i.gyazo.com/7ec4fdce912bb089407a453fe5d15fbb.mp4http://)
 ## It allows the user to search for an account by username and pull up their most recent match history.
-![](https://i.gyazo.com/1851aae5fb8bf2a0cd397cefcc48ed3f.mp4
-http://)
+![](https://i.gyazo.com/1851aae5fb8bf2a0cd397cefcc48ed3f.mp4http://)
 
 ## It also allows the user to save accounts and switch between them from a list to quickly access details between them.
 
