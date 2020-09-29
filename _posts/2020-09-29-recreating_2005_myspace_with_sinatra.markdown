@@ -1,18 +1,18 @@
 ---
 layout: post
 title:      "Recreating 2005 Myspace with Sinatra"
-date:       2020-09-29 21:52:30 +0000
+date:       2020-09-29 17:52:31 -0400
 permalink:  recreating_2005_myspace_with_sinatra
 ---
 
 
-For my Sinatra final project, I decided to go back to where it all began. If anyone used Myspace in it's prime you'll know it allowed you to customize your profile. That's where my initial curiosity for coding began so in a weird way I found myself in a full 360 now coding the thing that got me interested in the basics of coding???
+For my Sinatra project, I decided to go back to where it all began. If anyone used Myspace in it's prime you'll know it allowed you to customize your profile. That's where my initial curiosity for coding began so in a weird way I found myself in a full 360 now coding the thing that got me interested in the basics of coding???
 
 The recreation is a CRUD representation of Myspace how it was originally in the year 2005.
 
 ![](https://i.gyazo.com/633ac419b9a7680b486fd301efc58902.jpg)
 
-### It features a lot of the original websites functionality including
+### It features a lot of the original websites functionality including ###
 1. User Signup
 2. Profile Comments
 3. Messages and message notifcation
