@@ -94,7 +94,7 @@ Now if I wanted to be friends with Tom the code would look like this
 > 
 I'm shoveling myself into Toms PENDING friends list and now I can notify the user has a friend request when their pending friends list isn't empty!
 
-![](https://i.gyazo.com/ffec0ed7a7fe1d18c0f021b836a62dfb.mp4)
+![](https://i.gyazo.com/ffec0ed7a7fe1d18c0f021b836a62dfb.mp4http://)
 
 
 and the process of accepting that request would look like this 
