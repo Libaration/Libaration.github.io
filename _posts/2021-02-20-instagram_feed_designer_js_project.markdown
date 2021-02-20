@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Instagram Feed Designer JS Project"
-date:       2021-02-20 18:22:13 +0000
+date:       2021-02-20 13:22:14 -0500
 permalink:  instagram_feed_designer_js_project
 ---
 
@@ -34,9 +34,14 @@ def scrape_name
         self.name = load_site.css("h2").text
 end
 	```
+	
 
+### Great!
 With that information I had a baseline to build out my app. I used that information to create a bio for the user and an icon on the front end like this, it lives in a side panel that is revealed on user submit.
 ![](https://i.gyazo.com/b14ae74fbec67d14fea60f8f84d8d21b.pnghttp://)
+
+
+
 
 The backend function `scrape_photos` in the User model scrapes the most recent IG images and creates a relation between the current instance of the user and the newly created photos it looks like this.
 ```
