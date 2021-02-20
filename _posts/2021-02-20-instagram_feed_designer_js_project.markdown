@@ -25,42 +25,9 @@ class User < ApplicationRecord
     has_many :photos
     before_save :scrape_avatar, :scrape_name
 ```
-and in those functions the scrape grabbed the information and set it's own properties to the information recieved so I had an avatar image and the users name
-```
-def scrape_avatar
-        self.image = load_site.css(".profile-avatar img").attr('src').text
-    end
-def scrape_name
-        self.name = load_site.css("h2").text
-end
-	```
+Without diving too deep into the scraping those functions grabbed the information and set it's own properties to the information recieved so I had an avatar image and the users name as well as the users most recent photos. 
+
 	
-
-### Great!
-With that information I had a baseline to build out my app. I used that information to create a bio for the user and an icon on the front end like this, it lives in a side panel that is revealed on user submit.
-![](https://i.gyazo.com/b14ae74fbec67d14fea60f8f84d8d21b.pnghttp://)
-
-
-
-
-The backend function `scrape_photos` in the User model scrapes the most recent IG images and creates a relation between the current instance of the user and the newly created photos it looks like this.
-
-```
-    def scrape_photos
-            images = load_site.xpath('//div[@class="content box-photos-wrapper"]').css("li").css("img")
-            images.reverse.each do |img|
-                if Photo.exists?(['url LIKE ?', "#{img.attr('src')}"])
-                    next
-                end
-                    url = img.attr('src')
-                    caption = img.attr('alt')
-                    self.photos.create(caption: caption, url: url)
-                end
-    end
-```
-
-Basically if the image already exists go next. I don't want to add the entire feed again into my database causing duplicates if the same user is loaded twice otherwise lets scoop that information we need into the Photo's model.
-
 With that information I could build out the "Instagram Grid" that also reveals on user submit.
 ![](https://i.gyazo.com/bce24977fa331ce8569b934432183e0d.jpghttp://)
 
@@ -168,7 +135,7 @@ async displayPhotos() {
     }
 ```
 We do the same as we did for User but this time create a new photo
-and with each Photo we create a new ES6 Class for Photo's which has functions of it's own as wel!
+and with each Photo we create a new instance of the ES6 Class for Photo's which has functions of it's own as wel! such as photo.displayPhoto()
 So we can now display that photo which will render everything to the DOM showing us all users photos.
 #### Photo Class
 ```
@@ -202,7 +169,7 @@ displayPhoto() {
     }
 ```
 
-There's a lot more in terms of JS that was done for this project but I think these are the most important parts such as animations and making each photo draggable!
+There's a lot more in terms of JS that was done for this project such as animations and making each photo draggable! but I think these are the most important parts
 Here's a final image of how it looked when it was finished.
 
 ![](https://i.gyazo.com/7fed806995f913fa3d3e2ceaeb5fd1f6.mp4http://)
