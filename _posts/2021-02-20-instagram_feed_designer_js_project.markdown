@@ -44,6 +44,7 @@ With that information I had a baseline to build out my app. I used that informat
 
 
 The backend function `scrape_photos` in the User model scrapes the most recent IG images and creates a relation between the current instance of the user and the newly created photos it looks like this.
+
 ```
     def scrape_photos
             images = load_site.xpath('//div[@class="content box-photos-wrapper"]').css("li").css("img")
@@ -57,6 +58,7 @@ The backend function `scrape_photos` in the User model scrapes the most recent I
                 end
     end
 ```
+
 Basically if the image already exists go next. I don't want to add the entire feed again into my database causing duplicates if the same user is loaded twice otherwise lets scoop that information we need into the Photo's model.
 
 With that information I could build out the "Instagram Grid" that also reveals on user submit.
@@ -94,6 +96,9 @@ const loadUser = async (e) => {
 
 First we prevent default so the page doesn't reload, then we grab the information from textbox that contains the user they want to submit.
 We then make a fetch call to a ES6 class that holds all relative API calls I will make throughout my application. Seperating these concerns made the code a lot easier to read. Inside of the class specfically it's calling my createOrFindUser function which basically just either inserts a new user into my database or pulls up the one that already exists.
+
+##### APISERVICE CLASS
+
 ```
 async createOrFindUser(handle) {
         const response = await fetch(`${this.baseURL}/users`, {
@@ -151,7 +156,7 @@ Then a new ES6 class which constructs a user is created
 That class holds functions relating to to that specific user like displaying its Photos or User Info
 We can now call those instance functions because we have created the new User with the information we recieved.
 Here's what the user function looks like to display those photos.
-#### APISERVICE CLASS
+#### USER CLASS
 ```
 async displayPhotos() {
         const userObject = await apiService.grabPhotos(this);
